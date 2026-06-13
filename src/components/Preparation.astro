@@ -1,0 +1,35 @@
+---
+const time = [
+  { title: "Total", duration: "Approximately 10 minutes" },
+  { title: "Preparation", duration: "5 minutes" },
+  { title: "Cooking", duration: "5 minutes" },
+];
+---
+
+<section
+  class="bg-gradient-to-r from-yellow-400 to-green-500 text-white p-1 rounded-xl shadow-[0_0_10px] shadow-green-400"
+>
+  <article class="bg-zinc-800 rounded-xl p-4">
+    <div class="flex items-center gap-2">
+      
+      <span class="text-primary drop-shadow-icon-shadow drop-shadow-secondary">
+        <i class="fa-regular fa-clock"></i>
+      </span>
+      
+      <h2 class="font-mono text-primary uppercase tracking-widest text-lg ">
+        Preparation Time
+      </h2>
+    </div>
+
+    <ul class="list-disc text-primary pl-10">
+      {
+        time.map((item) => (
+          <li>
+            <span class="text-text-primary">{item.title}: </span>
+            <span class="text-text-secondary">{item.duration}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
+</section>

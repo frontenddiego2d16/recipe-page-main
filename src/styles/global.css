@@ -6,7 +6,9 @@
   --color-primary: #FFD100;	/*Primario*/
   --color-secondary: #FFC300;	/*Secundario*/
   --color-text-primary: #F5F5F5;  /*	Texto*/
-  --color-text-secondary: #7A7A7A;  /*	Texto secundario*/
+  --color-text-secondary: #B2B2B2;  /*	Texto secundario*/
+
+  --drop-shadow-icon-shadow: 0px 0px 4px;
 }
 
 .shadow-card{
@@ -15,4 +17,26 @@
   0px 0px 20px #ffc300,
   0px 0px 30px #ffd100
   ;
+}
+
+.cyber-card {
+  clip-path: polygon(
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%,
+    0 12px
+    #b2b2b2
+  );
+}
+
+.concave {
+  border-radius: 16px;
+  mask:
+    radial-gradient(
+      20px at top left,
+      transparent 98%,
+      black
+    );
 }
