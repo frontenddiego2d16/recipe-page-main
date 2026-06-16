@@ -1,0 +1,31 @@
+---
+const ingredients = [
+  "2-3 large eggs",
+  "Sait, to taste",
+  "Pepper, to teste",
+  "1 tablespoon of butter or oil",
+  "Optional fillings: cheese, diced vegetables, cooked meats, herbs",
+];
+---
+
+<section class="my-5 border-b-2 border-primary">
+  <div class="flex gap-3 items-center">
+    <span class="drop-shadow-icon-shadow drop-shadow-primary text-primary">
+      <i class="fa-solid fa-egg"></i>
+    </span>
+
+    <h2 class="font-mono text-primary uppercase tracking-widest text-lg">
+      Ingredients
+    </h2>
+  </div>
+
+  <ul class="text-primary list-disc pl-8 my-4">
+    {
+      ingredients.map((ingredient) => (
+        <li>
+          <span class="text-text-primary">{ingredient}</span>
+        </li>
+      ))
+    }
+  </ul>
+</section>
