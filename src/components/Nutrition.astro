@@ -1,0 +1,44 @@
+---
+interface Nutrition {
+  nutrient: string
+  amount: string
+}
+
+const nutrition: Nutrition[] = [
+  { nutrient: "Calories", amount: "277kcal" },
+  { nutrient: "Carbs", amount: "0g" },
+  { nutrient: "Protein", amount: "20g" },
+  { nutrient: "Fat", amount: "22g" },
+];
+---
+
+<section>
+  <div class="flex gap-3 items-center">
+    <span class="drop-shadow-icon-shadow drop-shadow-primary text-primary">
+      <i class="fa-solid fa-chart-pie"></i>
+    </span>
+
+    <h2 class="font-mono text-primary uppercase tracking-widest text-lg">
+      Nutrition
+    </h2>
+  </div>
+
+  <p class="text-text-secondary text-xs leading-5">
+    The table below shows nutritional values per serving without the additional
+    fillings.
+  </p>
+
+  <table class="my-6 w-full">
+    <tbody class="shadow-[0_0_10px] shadow-secondary">
+      {
+        nutrition.map((item) => (
+          <tr>
+            <td class="border border-secondary/70 py-2 px-4 text-primary font-semibold uppercase font-mono">{item.nutrient}</td>
+
+            <td class="border border-secondary/50 py-2 px-4 text-secondary">{item.amount}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</section>
