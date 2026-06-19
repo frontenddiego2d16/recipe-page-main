@@ -1,0 +1,60 @@
+---
+interface Instructions {
+  instruction: string;
+  preparation: string;
+}
+
+const instructions: Instructions[] = [
+  {
+    instruction: "Beat the eggs",
+    preparation:
+      "In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.",
+  },
+  {
+    instruction: "Heat the pan",
+    preparation:
+      "Place a non-stick frying pan over medium heat and add butter or oil.",
+  },
+  {
+    instruction: "Cook the omelette",
+    preparation:
+      "Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.",
+  },
+  {
+    instruction: "Add fillings (optional)",
+    preparation:
+      "When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.",
+  },
+  {
+    instruction: "Fold and serve",
+    preparation:
+      "As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.",
+  },
+  {
+    instruction: "Enjoy",
+    preparation: "Serve hot, with additional salt and pepper if needed.",
+  },
+];
+---
+
+<section class="my-5 border-b-2 border-primary pb-4">
+  <div class="flex gap-3 items-center">
+    <span class="drop-shadow-icon-shadow drop-shadow-primary text-primary">
+      <i class="fa-regular fa-file-lines"></i>
+    </span>
+
+    <h2 class="font-mono text-primary uppercase tracking-widest text-lg">
+      Instructions
+    </h2>
+  </div>
+
+  <ul class="text-xs text-primary list-disc pl-10 flex flex-col gap-3 mt-2">
+    {
+      instructions.map((item) => (
+        <li>
+          {item.instruction}: <span class="text-text-secondary">{item.preparation}</span>
+        </li>
+      ))
+    }
+  </ul>
+</section>
